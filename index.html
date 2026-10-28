@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第78回鶴文祭｜鶴丸高校</title>
+    <meta
+      name="description"
+      content="鶴丸高校の文化祭の公式サイトです。今年は10月10日(土)に開催！8：35より体育館行事が開始します。多くの皆さんのお越しをお待ちしております。"
+    />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./logomono.png" type="image/png">
+    <!-- Three.js をブラウザで直接読み込むための Import Map 設定 -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- オープニングアニメーション画面 -->
+    <div id="opening-screen" class="opening-screen">
+        <div class="opening-wrapper">
+            <div class="opening-logo-box">
+                <!-- 右下から出てくるカラフルな6色ストライプ -->
+                <div class="opening-colors">
+                    <span class="c-stripe color-1"></span>
+                    <span class="c-stripe color-2"></span>
+                    <span class="c-stripe color-3"></span>
+                    <span class="c-stripe color-4"></span>
+                    <span class="c-stripe color-5"></span>
+                    <span class="c-stripe color-6"></span>
+                </div>
+                <!-- あとから浮かび上がる鳥のロゴ -->
+                <img src="./logomono.png" alt="鶴ロゴ" class="opening-bird-img">
+            </div>
+            <p class="opening-text">第78回 鶴文祭</p>
+        </div>
+    </div>
+
+    <!-- 固定背景アニメーション -->
+    <div class="animation-bg" aria-hidden="true">
+        <div class="shape bar bar-blue blue"></div>
+        <div class="shape bar bar-red red"></div>
+        <div class="shape bar bar-yellow yellow"></div>
+
+        <div class="shape small s1 red"></div>
+        <div class="shape small s2 blue"></div>
+        <div class="shape small s3 red"></div>
+        <div class="shape small s4 blue"></div>
+        <div class="shape small s5 yellow"></div>
+
+        <div class="circle circle-blue"></div>
+        <div class="circle circle-pink"></div>
+        <div class="circle circle-yellow"></div>
+
+        <div class="arc arc1"></div>
+        <div class="arc arc2"></div>
+        <div class="arc arc3"></div>
+    </div>
+
+    <!-- ヘッダーナビゲーション -->
+    <header class="site-header">
+        <a href="#home" class="header-brand">
+            <img src="./logomono.png" alt="第78回文化祭">
+        </a>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="header-nav" id="headerNav">
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#date">開催日時</a></li>
+                <li><a href="#news">お知らせ</a></li>
+                <li><a href="#logo">ロゴ紹介</a></li>
+                <li><a href="#schedule">スケジュール</a></li>
+                <li><a href="event.html">展示・ステージ詳細</a></li>
+                <li><a href="#map">校内マップ</a></li>
+                <li><a href="#access">アクセス</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ヒーローエリア -->
+    <section id="home" class="hero-section">
+        <div class="hero-card">
+            <p class="hero-sub">第78回鶴丸高校文化祭</p>
+            <h1 class="hero-title">鶴 命</h1>
+            <p class="hero-catchphrase">～一瞬を、一生の思い出に～</p>
+        </div>
+        <a href="#date" class="scroll-down">SCROLL</a>
+    </section>
+
+    <main>
+        <!-- DATE（開催日時） -->
+        <section id="date">
+            <div class="section-header">
+                <h2>DATE</h2>
+            </div>
+            <div class="date-box">
+                <p class="date-text">2026.10.10 <span class="day-of-week">sat</span></p><br>
+                <p class="time-text">8:35 〜 16:30</p>
+            </div>
+        </section>
+
+        <!-- NEWS（お知らせ） -->
+        <section id="news">
+            <div class="section-header">
+                <h2>NEWS</h2>
+            </div>
+            <div class="news-box">
+                <ul class="news-list">
+                    <li class="news-item">
+                        <span class="news-date">2026.10.02</span>
+                        <span class="news-title">文化祭公式ホームページを公開しました。</span>
+                    </li>
+                </ul>
+                <div class="news-btn-wrapper">
+                    <a href="./news.html" class="news-btn">以前のお知らせ</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGO（ロゴ・スローガン紹介） -->
+        <section id="logo">
+            <div class="section-header">
+                <h2>LOGO</h2>
+            </div>
+            <div class="logo-box">
+                <div class="logo-content">
+                    <div class="logo-image-placeholder">
+                        <img src="./logo.png" alt="" class="logo-image-placeholder">
+                    </div>
+                    <div class="logo-text-area">
+                        <h3 class="logo-title">
+                            <span>「鶴命」</span>
+                            <span>~ 一瞬を、一生の思い出に ~</span>
+                        </h3>
+                        <p class="logo-description">
+                            今年度のテーマは「鶴命」、キャッチフレーズは「一瞬を、一生の思い出に」です。
+                            鶴丸らしく「革命」をおこし、文化祭の一瞬、一瞬の時間を一生の思い出にしたいという思いが込められています。
+                            ロゴは鶴が様々な個性の中飛翔する姿を現しています。文化祭でも、様々な個性を飛翔させたいという思いが込められています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCHEDULE（タイムスケジュール） -->
+        <section id="schedule">
+            <!-- JSで動的に表示されます -->
+        </section>
+
+        <!-- MAP（校内マップ） -->
+        <section id="map">
+            <div class="section-header">
+                <h2>MAP</h2>
+            </div>
+            <div class="map-box">
+                <!-- 場所切り替えボタン -->
+                <ul id="floor">
+                    <li><a class="location" href="javascript:void(0)" data-x="-150" data-y="25" data-z="100">体育館</a></li>
+                    <li><a class="location" href="javascript:void(0)" data-x="75" data-y="30" data-z="30">生徒館</a></li>
+                    <li><a class="location" href="javascript:void(0)" data-x="-5" data-y="30" data-z="200">キッチンカー</a></li>
+                </ul>
+
+                <div class="map-content">
+                    <canvas id="map-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCESS（アクセス） -->
+        <section id="access">
+            <div class="section-header">
+                <h2>ACCESS</h2>
+            </div>
+            <div class="access-box">
+                <div class="access-info">
+                    <div class="access-item">
+                        <span class="access-label">会場</span>
+                        <span>本校校舎・体育館・中庭</span>
+                    </div>
+                    <div class="access-item">
+                        <span class="access-label">最寄り駅</span>
+                        <span>JR鹿児島中央駅から徒歩10分 / 「鶴丸高校前」停留所　下車すぐ</span>
+                    </div>
+                    <div class="access-item">
+                        <span class="access-label">注意事項</span>
+                        <span>敷地内および周辺に駐車場はございません。公共交通機関をご利用ください。</span>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3398.6150923569376!2d130.53553187507217!3d31.589601443719253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353e675c801f2815%3A0x1d93b4c47d6f800a!2z6bm_5YWQ5bO255yM56uL6ba05Li46auY562J5a2m5qCh!5e0!3m2!1sja!2sjp!4v1789973130217!5m2!1sja!2sjp" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 鹿児島県立鶴丸高等学校放送部 All Rights Reserved.</p>
+    </footer>
+
+    <script type = "module" src="./script.js"></script>
+    <!-- GSAP（スムーズなカメラ移動用ライブラリ） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type = "module" src="./threev1.1.3.js"></script>
+</body>
+</html>

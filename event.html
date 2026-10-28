@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS - 第78回鶴文祭</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logomono.png" type="image/png">
+</head>
+<body>
+
+    <!-- 固定背景アニメーション -->
+    <div class="animation-bg" aria-hidden="true">
+        <div class="shape bar bar-blue blue"></div>
+        <div class="shape bar bar-red red"></div>
+        <div class="shape bar bar-yellow yellow"></div>
+        <div class="circle circle-blue"></div>
+        <div class="circle circle-pink"></div>
+        <div class="circle circle-yellow"></div>
+        <div class="arc arc1"></div>
+        <div class="arc arc2"></div>
+        <div class="arc arc3"></div>
+    </div>
+
+    <!-- ヘッダーナビゲーション -->
+    <header class="site-header">
+        <a href="index.html" class="header-brand">
+            <img src="logomono.png" alt="第78回文化祭">
+        </a>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="header-nav" id="headerNav">
+            <ul>
+                <li><a href="index.html#home">ホーム</a></li>
+                <li><a href="event.html" class="active">展示・ステージ詳細</a></li>
+                <li><a href="index.html#date">開催日時</a></li>
+                <li><a href="index.html#news">お知らせ</a></li>
+                <li><a href="index.html#schedule">スケジュール</a></li>
+                <li><a href="index.html#map">校内マップ</a></li>
+                <li><a href="index.html#access">アクセス</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="events-page-main">
+        <!-- ページタイトル -->
+        <section class="events-hero-section">
+            <h1 class="events-page-title">EVENTS</h1>
+            <p class="events-page-sub">クラス展示・部活動・特別参加団体 紹介</p>
+        </section>
+
+         <!-- タブフィルターボタン -->
+        <div class="tab-container">
+            <button class="tab-btn active" data-category="all">すべて</button>
+            <button class="tab-btn" data-category="1year">1年</button>
+            <button class="tab-btn" data-category="2year">2年</button>
+            <button class="tab-btn" data-category="club">部活</button>
+            <button class="tab-btn" data-category="stage">ステージ</button>
+            <button class="tab-btn" data-category="other">その他</button>
+        </div>
+
+        <!-- イベントカード一覧表示エリア -->
+        <section class="events-list-section">
+            <div id="events-container" class="events-container">
+                <!-- JSでカードが動的に生成されます -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 鹿児島県立鶴丸高等学校放送部 All Rights Reserved.</p>
+    </footer>
+
+ <script type="module" src="./script.js"></script>
+</body>
+</html>

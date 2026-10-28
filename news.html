@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS - 第78回鶴文祭</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logomono.png" type="image/png">
+    <style>
+        .news-page-main{padding-top:100px;min-height:85vh}
+        .news-hero-section{text-align:center;background:none!important;box-shadow:none!important;margin-bottom:20px!important;padding:20px 15px!important}
+        .news-page-title{font-size:clamp(2.5rem,6vw,4rem);font-weight:900;color:#333;letter-spacing:4px;margin-bottom:5px;background:linear-gradient(transparent 60%,#eaef90 60%);display:inline-block;padding:0 10px}
+        .news-page-sub{font-size:1rem;color:#0077b6;font-weight:bold;margin-bottom:10px}
+        .news-list-section{max-width:950px;margin:0 auto 60px;padding:0 20px;background:none!important;box-shadow:none!important}
+        .news-page-container{display:flex;flex-direction:column;gap:20px}
+        .news-page-card{background:rgba(255,255,255,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:16px;padding:25px 32px;box-shadow:0 7px 22px rgba(0,0,0,.06);border-top:5px solid #d1d800}
+        .news-page-card-header{display:flex;align-items:center;gap:18px;padding-bottom:13px;border-bottom:1px solid #e0f2fe}
+        .news-page-date{color:#0096c7;font-weight:bold;font-size:1rem;white-space:nowrap}
+        .news-page-label{display:inline-block;padding:3px 11px;border-radius:12px;background:#fff3b0;color:#6f6900;font-size:.78rem;font-weight:bold}
+        .news-page-title-text{font-size:1.12rem;font-weight:bold;color:#333;margin-top:16px}
+        .news-page-body{margin-top:10px;color:#555;font-size:.95rem;line-height:1.8}
+        .news-back-wrapper{text-align:center;margin-top:30px}
+        .news-back-btn{display:inline-block;padding:10px 28px;background:#ffd166;color:#333;font-weight:bold;text-decoration:none;border-radius:20px;box-shadow:0 2px 6px rgba(0,0,0,.08);transition:all .2s ease}
+        .news-back-btn:hover{background:#ffb703;transform:translateY(-2px)}
+        @media(max-width:768px){
+            .news-page-card{padding:22px 20px}
+            .news-page-card-header{flex-wrap:wrap;gap:8px 12px}
+            .news-page-date{font-size:.9rem}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 固定背景アニメーション -->
+    <div class="animation-bg" aria-hidden="true">
+        <div class="shape bar bar-blue blue"></div>
+        <div class="shape bar bar-red red"></div>
+        <div class="shape bar bar-yellow yellow"></div>
+        <div class="circle circle-blue"></div>
+        <div class="circle circle-pink"></div>
+        <div class="circle circle-yellow"></div>
+        <div class="arc arc1"></div>
+        <div class="arc arc2"></div>
+        <div class="arc arc3"></div>
+    </div>
+
+    <!-- ヘッダーナビゲーション -->
+    <header class="site-header">
+        <a href="index.html" class="header-brand">
+            <img src="logomono.png" alt="第78回文化祭">
+        </a>
+        
+        <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="header-nav" id="headerNav">
+            <ul>
+                <li><a href="index.html#home">ホーム</a></li>
+                <li><a href="event.html" class="active">展示・ステージ詳細</a></li>
+                <li><a href="index.html#date">開催日時</a></li>
+                <li><a href="index.html#news">お知らせ</a></li>
+                <li><a href="index.html#schedule">スケジュール</a></li>
+                <li><a href="index.html#map">校内マップ</a></li>
+                <li><a href="index.html#access">アクセス</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="news-page-main">
+        <section class="news-hero-section">
+            <h1 class="news-page-title">NEWS</h1>
+            <p class="news-page-sub">文化祭に関する最新のお知らせ</p>
+        </section>
+
+        <section class="news-list-section">
+            <div class="news-page-container">
+                <article class="news-page-card">
+                    <div class="news-page-card-header">
+                        <time class="news-page-date" datetime="2026-10-02">2026.10.02</time>
+                        <span class="news-page-label">お知らせ</span>
+                    </div>
+                    <h2 class="news-page-title-text">文化祭公式ホームページを公開しました。</h2>
+                    <p class="news-page-body">
+                        第78回文化祭「鶴命」の公式ホームページを公開しました。
+                    </p>
+                </article>
+                <!-- 新しいお知らせは、この article をコピーして追加できます。 -->
+            </div>
+
+            <div class="news-back-wrapper">
+                <a href="index.html#news" class="news-back-btn">ホームのお知らせへ戻る</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 鹿児島県立鶴丸高等学校放送部 All Rights Reserved.</p>
+    </footer>
+
+ <script type="module" src="./script.js"></script>
+</body>
+</html>
